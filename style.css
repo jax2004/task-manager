@@ -10,13 +10,16 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .todo-app {
   width: 100%;
   max-width: 540px;
   background: #fff;
-  margin: 100px auto 20px;
+  margin: 80px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 20px;
 }
@@ -27,45 +30,42 @@
   justify-content: center;
   font-size: 25px;
   margin-bottom: 10px;
+  gap: 10px;
 }
 
 .todo-app img {
   height: 30px;
 }
 
+/* INPUT */
 .todo-app input {
-  flex: 1;
   height: 50px;
   outline: none;
   border: none;
-  background: transparent;
-  padding: 0;
-  font-size: 16px;
+  background-color: #edeef0;
+  width: 70%;
+  border-radius: 10px;
+  padding-left: 10px;
+  opacity: 0.6;
+  transition: 0.2s ease;
 }
 
 .todo-app input:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
+/* BUTTON */
 .addButton {
   outline: none;
   color: #fff;
-  border: none;
+  border: 1px solid black;
   height: 50px;
-  width: 80px;
+  width: 28%;
   background: #ee850e;
-  border-radius: 30px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: 600;
-}
-.input-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #edeef0;
-  border-radius: 30px;
-  padding-left: 20px;
-  margin-bottom: 25px;
+  margin-left: 5px;
+  transition: 0.2s ease;
 }
 
 .addButton:hover {
@@ -77,34 +77,33 @@
   transform: scale(0.95);
 }
 
+/* TASK LIST */
 .ulTaskList {
   list-style: none;
   color: #575c67;
+  margin-top: 20px;
 }
 
 .ulTaskList li {
-  margin: 15px 0;
+  margin: 20px 10px 20px 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding: 10px 35px 10px 45px;
+  gap: 10px;
   cursor: pointer;
-  user-select: none;
+  position: relative;
+  padding-right: 40px;
+  word-break: break-word;
 }
 
 .ulTaskList li span {
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   position: absolute;
-  border-radius: 50%;
-  right: 10px;
+  right: 0;
   font-size: large;
-  text-align: center;
+  border-radius: 50%;
   padding: 5px;
   width: 30px;
-
+  text-align: center;
 }
 
 .ulTaskList li span:hover {
@@ -121,12 +120,11 @@
   background-size: cover;
   background-position: center;
   position: absolute;
-  left: 10px;
+  left: -35px;
 }
 
 .ulTaskList li.checked {
   opacity: 0.7;
-  color: #575c67;
   text-decoration: line-through;
 }
 
@@ -134,6 +132,7 @@
   background-image: url(images/checked.png);
 }
 
+/* CREDIT */
 .credit {
   color: white;
   text-align: center;
@@ -142,23 +141,29 @@
   opacity: 0.6;
 }
 
+/* RESPONSIVE */
 @media (max-width: 600px) {
   .todo-app {
     margin: 40px 10px;
     padding: 25px 15px 50px;
   }
 
+  /* STACK INPUT + BUTTON */
   .todo-app input {
     width: 100%;
+    display: block;
+    margin-bottom: 10px;
   }
 
   .addButton {
     width: 100%;
-    margin-top: 10px;
+    margin-left: 0;
+    display: block;
   }
 
   .ulTaskList li {
-    margin: 20px 10px;
+    margin: 18px 10px 18px 40px;
+    font-size: 14px;
   }
 
   .ulTaskList li::before {
