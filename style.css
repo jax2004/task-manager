@@ -132,23 +132,14 @@
   background-image: url(images/checked.png);
 }
 
-/* CREDIT */
-.credit {
-  color: white;
-  text-align: center;
-  margin-top: 15px;
-  font-size: 12px;
-  opacity: 0.6;
-}
 
-/* RESPONSIVE */
 @media (max-width: 600px) {
   .todo-app {
     margin: 40px 10px;
     padding: 25px 15px 50px;
   }
 
-  /* STACK INPUT + BUTTON */
+
   .todo-app input {
     width: 100%;
     display: block;
