@@ -74,12 +74,13 @@
 }
 
 .ulTaskList li {
-  margin: 30px 50px;
+  margin: 20px 10px;
   display: flex;
-  padding-top: 3px;
-  gap: 10px;
-  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
   position: relative;
+  padding-left: 45px;
 }
 
 .ulTaskList li span {
@@ -88,11 +89,12 @@
     color 0.2s ease;
   position: absolute;
   border-radius: 50%;
-  right: 0;
+  right: 10px;
   font-size: large;
   text-align: center;
   padding: 5px;
   width: 30px;
+
 }
 
 .ulTaskList li span:hover {
@@ -109,7 +111,7 @@
   background-size: cover;
   background-position: center;
   position: absolute;
-  left: -35px;
+  left: 10px;
 }
 
 .ulTaskList li.checked {
